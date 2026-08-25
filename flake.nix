@@ -33,6 +33,7 @@
             ];
           }
 
+          ./modules/bash.nix
           ./modules/kitty.nix
           ./modules/starship.nix
         ];

@@ -19,7 +19,7 @@
 
       directory = {
         truncate_to_repo = false;
-        truncate_length = 100;
+        truncation_length = 100;
         format = "[$path]($style) ";
       };
 
@@ -33,7 +33,7 @@
 
       cmd_duration.disabled = true;
       package.disabled = true;
-      cmakee.disabled = true;
+      cmake.disabled = true;
 
       python = {
         disabled = false;
