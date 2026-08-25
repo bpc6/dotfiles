@@ -6,6 +6,11 @@
   programs.kitty = {
     enable = true;
 
+    # zbook doesn't play with kitty so use apt
+    package = pkgs.writeShellScriptBin "kitty" ''
+      exec /usr/bin/kitty "$@"
+    '';
+
     font = {
       name = "JetBrainsMonoNL Nerd Font Mono";
       size = 15.0;
