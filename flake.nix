@@ -35,6 +35,7 @@
 
           ./modules/bash.nix
           ./modules/kitty.nix
+          ./modules/nvim.nix
           ./modules/starship.nix
         ];
       };
