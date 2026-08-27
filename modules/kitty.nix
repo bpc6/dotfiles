@@ -6,11 +6,6 @@
   programs.kitty = {
     enable = true;
 
-    # zbook doesn't play with kitty so use installer from docs
-    package = pkgs.writeShellScriptBin "kitty" ''
-      exec ${config.home.homeDirectory}/.local/kitty.app/bin/kitty "$@"
-    '';
-
     font = {
       name = "JetBrainsMonoNL Nerd Font Mono";
       size = 15.0;
