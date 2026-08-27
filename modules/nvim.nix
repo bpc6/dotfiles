@@ -8,7 +8,6 @@
     fd
     fzf
     lazygit
-    tree-sitter
     statix
     nil
   ];

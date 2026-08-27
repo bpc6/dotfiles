@@ -23,7 +23,7 @@
     shellOptions = [ "histappend" "checkwinsize" ];
 
     sessionVariables = {
-      TZ = "America/Denve";
+      TZ = "America/Denver";
     };
 
     initExtra = ''

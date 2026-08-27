@@ -29,7 +29,7 @@
               unzip
             ];
             home.sessionPath = [
-              "HOME/.local/bin"
+              "$HOME/.local/bin"
             ];
           }
 
