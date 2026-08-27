@@ -34,6 +34,7 @@
           }
 
           ./modules/bash.nix
+          ./modules/direnv.nix
           ./modules/git.nix
           ./modules/kitty.nix
           ./modules/nvim.nix
