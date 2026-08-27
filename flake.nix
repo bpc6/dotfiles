@@ -9,28 +9,34 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager }:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+    }:
     let
       system = "x86_64-linux";
-    in {
+    in
+    {
       homeConfigurations."bryan" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [
           {
-            home.username = "bryan";
-            home.homeDirectory = "/home/bryan";
-            home.stateVersion = "24.05";
-          }
+            home = {
+              username = "bryan";
+              homeDirectory = "/home/bryan";
+              stateVersion = "24.05";
 
-          {
-            home.packages = with nixpkgs.legacyPackages.${system};
-            [
-              uv
-              unzip
-            ];
-            home.sessionPath = [
-              "$HOME/.local/bin"
-            ];
+              packages = with nixpkgs.legacyPackages.${system}; [
+                uv
+                unzip
+              ];
+
+              sessionPath = [
+                "$HOME/.local/bin"
+              ];
+            };
           }
 
           ./modules/bash.nix
