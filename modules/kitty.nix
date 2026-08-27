@@ -6,9 +6,9 @@
   programs.kitty = {
     enable = true;
 
-    # zbook doesn't play with kitty so use apt
+    # zbook doesn't play with kitty so use installer from docs
     package = pkgs.writeShellScriptBin "kitty" ''
-      exec /usr/bin/kitty "$@"
+      exec ${config.home.homeDirectory}/.local/kitty.app/bin/kitty "$@"
     '';
 
     font = {
