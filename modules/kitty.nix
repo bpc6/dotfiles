@@ -32,7 +32,7 @@
       bold_italic_font = "auto";
 
       copy_on_select = "clipboard";
-      clipboard_control = "write-clipboard write-primary read-clipboard read-primary";
+      clipboard_control = "write-clipboard write-primary";
 
       enable_audio_bell = "no";
     };
