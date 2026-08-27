@@ -5,6 +5,10 @@
 
   programs.kitty = {
     enable = true;
+    
+    package = pkgs.writeShellScriptBin "kitty" ''
+      exec ${config.home.homeDirectory}/.local/kitty.app/bin/kitty "$@"
+    '';
 
     font = {
       name = "JetBrainsMonoNL Nerd Font Mono";
@@ -31,6 +35,16 @@
 
       enable_audio_bell = "no";
     };
+  };
+
+
+  xdg.desktopEntries.kitty = {
+    name = "Kitty";
+    exec = "${config.home.homeDirectory}/.local/kitty.app/bin/kitty";
+    terminal = false;                    # kitty IS the terminal — don't wrap
+    categories = [ "System" "TerminalEmulator" ];
+    comment = "Kitty terminal emulator";
+    icon = "${config.home.homeDirectory}/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png";
   };
 }
 
